@@ -108,6 +108,23 @@ class _HomePageState extends State<HomePage> {
     this.setState(() {
       image = File(pickedFile.path);
     });
+    String base64Image = base64Encode(image.readAsBytesSync());
+
+    var url = Uri.parse('http://10.0.2.2:5000/');
+    final response = await http.post(
+      url,
+      body: jsonEncode(
+        {
+          'image': base64Image,
+        },
+      ),
+      headers: {'Content-Type': "application/json"},
+    );
+
+    print('StatusCode : ${response.statusCode}');
+    print('Return Data : ${response.body}');
+
+
     Navigator.of(context).pop();
 
 
