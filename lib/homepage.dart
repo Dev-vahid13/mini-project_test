@@ -6,6 +6,8 @@ import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:miniproject/CaptionBar.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key key}) : super(key: key);
@@ -18,6 +20,7 @@ class _HomePageState extends State<HomePage> {
 
   File image = null;
   final picker = ImagePicker();
+  String caption=null;
 
 
 
@@ -83,7 +86,7 @@ class _HomePageState extends State<HomePage> {
     });
     String base64Image = base64Encode(image.readAsBytesSync());
 
-    var url = Uri.parse('http://10.0.2.2:5000/');
+    var url = Uri.parse('https://imagecaption2021.herokuapp.com/');
     final response = await http.post(
       url,
       body: jsonEncode(
@@ -93,6 +96,11 @@ class _HomePageState extends State<HomePage> {
       ),
       headers: {'Content-Type': "application/json"},
     );
+
+    print(response);
+    setState(() {
+      caption = "done";
+    });
 
     print('StatusCode : ${response.statusCode}');
     print('Return Data : ${response.body}');
@@ -110,14 +118,15 @@ class _HomePageState extends State<HomePage> {
     });
     String base64Image = base64Encode(image.readAsBytesSync());
 
-    var url = Uri.parse('http://10.0.2.2:5000/');
+    Map <String, dynamic> requestpayload = {
+      'image': base64Image
+    };
+
+    var url = Uri.parse('https://imagecaption2021.herokuapp.com/');
     final response = await http.post(
       url,
-      body: jsonEncode(
-        {
-          'image': base64Image,
-        },
-      ),
+      body: jsonEncode(requestpayload),
+
       headers: {'Content-Type': "application/json"},
     );
 
@@ -140,6 +149,8 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              SizedBox(height: 40,),
+              CaptionBar(caption: caption,),
               Container(
                 height: MediaQuery.of(context).size.height*.5,
                 child: image==null?
@@ -160,6 +171,7 @@ class _HomePageState extends State<HomePage> {
                 ):Image.file(image),
                 padding: EdgeInsets.all(20),
               ),
+
               ElevatedButton(onPressed: (){
                 _chooseOption(context);
               },

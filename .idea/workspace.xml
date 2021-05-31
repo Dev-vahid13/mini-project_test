@@ -467,6 +467,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -518,22 +525,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1620289371620" />
-    <state width="1493" height="46" key="GridCell.Tab.0.bottom" timestamp="1621348891472">
+    <state width="1493" height="254" key="GridCell.Tab.0.bottom" timestamp="1622444704029">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="46" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1621348891472" />
-    <state width="1493" height="46" key="GridCell.Tab.0.center" timestamp="1621348891472">
+    <state width="1493" height="254" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622444704029" />
+    <state width="1493" height="254" key="GridCell.Tab.0.center" timestamp="1622444704028">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="46" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1621348891472" />
-    <state width="1493" height="46" key="GridCell.Tab.0.left" timestamp="1621348891472">
+    <state width="1493" height="254" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1622444704028" />
+    <state width="1493" height="254" key="GridCell.Tab.0.left" timestamp="1622444704028">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="46" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1621348891472" />
-    <state width="1493" height="46" key="GridCell.Tab.0.right" timestamp="1621348891472">
+    <state width="1493" height="254" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1622444704028" />
+    <state width="1493" height="254" key="GridCell.Tab.0.right" timestamp="1622444704029">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="46" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1621348891472" />
+    <state width="1493" height="254" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1622444704029" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1620289382763">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
