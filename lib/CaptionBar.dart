@@ -12,38 +12,27 @@ class _CaptionBarState extends State<CaptionBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width*.7,
-      height: 50,
+      margin: EdgeInsets.symmetric(horizontal: 10),
+      width: MediaQuery.of(context).size.width*.85,
+      height: 70,
+      alignment: Alignment.center,
       child: Card(
-
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: Text(
-                widget.caption==null?"No image selected":widget.caption
-              ),
-            ),
-            SizedBox(
-              child: Container(
-                width: 1,
-                color: Colors.black26,
-              ),
+              width: MediaQuery.of(context).size.width*.65,
+              child:Center(child: Text(widget.caption))
             ),
             Container(
-              child: GestureDetector(
-                onTap: (){
-
-                },
-                child: Icon(
-                  Icons.multitrack_audio,
-                  color: Colors.lightBlue,
-                ),
-              ),
-              
+              color: Colors.black26,
+              width: 2,
+              height:85,
             ),
+            Container(
+              alignment: Alignment.center,
+              width: MediaQuery.of(context).size.width*.15-2,
+              child: Center(child: Icon(Icons.multitrack_audio))
+            )
           ],
         ),
       ),
